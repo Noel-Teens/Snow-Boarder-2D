@@ -6,7 +6,7 @@ public class CrashDetector : MonoBehaviour
     [SerializeField] float invokeTime = 0.5f;
     [SerializeField] ParticleSystem crashEffect;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Ground")
         {
