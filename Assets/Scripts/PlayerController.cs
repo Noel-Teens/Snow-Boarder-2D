@@ -45,11 +45,11 @@ public class PlayerController : MonoBehaviour
 
     void RotatePlayer()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") < -0.1f || Input.GetKey(KeyCode.A))
         {
             rb2d.AddTorque(torqueAmount);
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetAxis("Horizontal") > 0.1f || Input.GetKey(KeyCode.D))
         {
             rb2d.AddTorque(-torqueAmount);
         }
