@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     void RespondToBoost()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             surfaceEffector2D.speed = boostSpeed;
         }
