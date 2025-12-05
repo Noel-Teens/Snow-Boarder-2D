@@ -4,9 +4,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    [SerializeField] float torqueAmount = 1f;
-    [SerializeField] float boostSpeed = 30f;
-    [SerializeField] float baseSpeed = 20f;
+    [SerializeField] float torqueAmount = 14.2f;
+    [SerializeField] float boostSpeed = 40f;
+    [SerializeField] float baseSpeed = 25f;
     Rigidbody2D rb2d;
     SurfaceEffector2D surfaceEffector2D;
     bool canMove = true;
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         surfaceEffector2D = FindFirstObjectByType<SurfaceEffector2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (canMove)
         {
